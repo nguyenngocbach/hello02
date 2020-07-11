@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <Transition
+        app:constraintSetEnd="@+id/ended"
+        app:constraintSetStart="@+id/started"
+        app:duration="1000"
+        >
+
+        <OnSwipe app:touchAnchorId="@id/grame_nhe"
+            app:dragDirection="dragRight"
+            app:touchAnchorSide="right"
+            />
+    </Transition>
+    <ConstraintSet android:id="@+id/started">
+        <Constraint android:id="@+id/grame_nhe"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/ended">
+        <Constraint android:id="@+id/grame_nhe"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+    </ConstraintSet>
+</MotionScene >
